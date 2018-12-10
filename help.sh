@@ -30,6 +30,7 @@ echo " Fancy Git v$FANCYGIT_VERSION - $fg_current_year by Diogo Alexsander Cavil
  fancygit dark-double-line     Change prompt to the dark style in double line.
  fancygit light                Change prompt to the light style.
  fancygit light-double-line    Change prompt to the light style in double line.
+ fancygit statusbar            Change prompt to the statusbar style.
 
  ICONS MEANING
 

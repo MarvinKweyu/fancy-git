@@ -149,6 +149,7 @@ case "$1" in
     "dark-double-line") fg_change_mode "dark-double-line";;
     "light") fg_change_mode "light";;
     "light-double-line") fg_change_mode "light-double-line";;
+    "statusbar") fg_change_mode "statusbar";;
     "configure-fonts") fg_install_fonts;;
     "") return;;
     *) fg_command_not_found "$1";;

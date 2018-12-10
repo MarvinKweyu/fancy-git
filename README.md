@@ -83,6 +83,7 @@ There are a bit of styles you can choose from. Here you have a list of available
 | fancygit dark-double-line   | The same as `dark` style but the cursor gets waiting on next line.
 | fancygit light              | The opposite of `dark` style.
 | fancygit light-double-line  | The same as `light` style but the cursor gets waiting on next line.
+| fancygit statusbar          | Add a status bar to the terminal.
 
 ### Commands
 

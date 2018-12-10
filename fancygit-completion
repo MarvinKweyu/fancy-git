@@ -19,6 +19,7 @@ _fancygit() {
         dark-double-line \
         light \
         light-double-line \
+        statusbar \
         --colors \
         --colors-set
     '
