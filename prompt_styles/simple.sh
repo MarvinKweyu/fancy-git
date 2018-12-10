@@ -85,6 +85,18 @@ fancygit_prompt_builder() {
     where="${blue}\w${none}"
 
     PS1="${bold}$user$at$host:$where\$$(fg_branch_name)${bold_none} "
+
+    local dir=$(pwd)
+    local height=$(tput lines)
+    local width=$(tput cols)
+    local length=${#dir}
+
+    # tput cup $height 1
+    # printf "%*s" $(tput cols) | tr " " "#"
+
+    tput cup $(( height + 1 )) 0
+    tput rev;  echo "$dir";  tput sgr0
+    tput cup 0 0
 }
 
 PROMPT_COMMAND="fancygit_prompt_builder"
