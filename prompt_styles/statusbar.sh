@@ -82,21 +82,22 @@ fancygit_prompt_builder() {
     user="${light_green}\u${none}"
     at="${none}@${none}"
     host="${light_green}\h${none}"
-    where="${blue}\w${none}"
+    where="${blue}\W${none}"
 
-    PS1="${bold}$user$at$host:$where\$$(fg_branch_name)${bold_none} "
+    PS1="${bold}$where\$$(fg_branch_name)${bold_none} "
+    python ~/.fancy-git/prompt_styles/statusbar.py
 }
 
-tput_position() {
-    local dir=$(pwd)
-    local height=$(tput lines)
-    local width=$(tput cols)
-    local length=${#dir}
+# tput_position() {
+#     local dir=$(pwd)
+#     local height=$(tput lines)
+#     local width=$(tput cols)
+#     local length=${#dir}
 
-    local lastline=$(expr $height + 1)
-    tput cup $lastline 0
-    tput rev;  echo "$dir";  tput sgr0
-    tput cup reset
-}
+#     local lastline=$(expr $height + 1)
+#     tput cup $lastline 0
+#     tput rev;  echo "$dir";  tput sgr0
+#     tput cup reset
+# }
 
-PROMPT_COMMAND="fancygit_prompt_builder; tput_position"
+PROMPT_COMMAND="fancygit_prompt_builder"
