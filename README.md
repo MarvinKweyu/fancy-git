@@ -11,9 +11,7 @@
 That's a prompt changer to show a few cool git informations about your repository on terminal.
 You can choose among predefined styles and enjoy all the aliases it provides you.
 
-Feel free for contributing, pull requests and issues are always welcome! :wink:
-
-Know how to contribute by [clicking here](https://github.com/diogocavilha/fancy-git#contributing-rocket)
+Feel free for contributing. **Pull Requests** and **issues** are always welcome! :wink: Know how to contribute by [clicking here](https://github.com/diogocavilha/fancy-git#contributing-rocket)
 
 :bookmark: [You can check out the changelog here](https://github.com/diogocavilha/fancy-git/blob/master/CHANGELOG.md)
 
