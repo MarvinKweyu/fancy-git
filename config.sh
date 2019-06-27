@@ -6,16 +6,6 @@
 # Configuration file.
 
 # ASCII
-local separator
-local branch_icon
-local is_git_repo
-local has_git_stash
-local has_untracked_files
-local has_changed_files
-local has_added_files
-local has_unpushed_commits
-local working_on_venv
-
 separator=""
 branch_icon=""
 is_git_repo=""
@@ -28,15 +18,6 @@ has_unpushed_commits="  "
 working_on_venv="  "
 
 # Git info
-local branch_name
-local branch_status
-local staged_files
-local git_stash
-local git_untracked_files
-local git_changed_files
-local git_has_unpushed_commits
-local git_number_unpushed_commits
-
 branch_name=$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/')
 branch_status=$(git status -s 2> /dev/null)
 staged_files=$(git diff --name-only --cached 2> /dev/null)
@@ -49,32 +30,6 @@ git_number_untracked_files=$(git ls-files --others --exclude-standard 2> /dev/nu
 git_number_changed_files=$(git ls-files -m 2> /dev/null | wc -l)
 
 # Colors
-local none
-local bold
-local bold_none
-local bg_none
-local bg_light_gray
-local bg_dark_gray
-local bg_dark_gray_01
-local bg_dark_gray_02
-local bg_dark_gray_03
-local bg_light_yellow
-local bg_white
-local bg_blue
-local bg_yellow
-local bg_light_magenta
-local dark_gray
-local blue
-local black
-local white
-local yellow
-local light_gray
-local light_yellow
-local light_magenta
-local light_green
-local light_red
-local cyan
-
 none="\\[\\e[39m\\]"
 bold="\\[\\e[1m\\]"
 bold_none="\\[\\e[0m\\]"
@@ -107,32 +62,6 @@ light_red="\\[\\e[91m\\]"
 cyan="\\[\\e[36m\\]"
 
 # Separator styles
-local s_darkgray_bglightmagenta
-local s_darkgray_bgblue
-local s_lightmagenta_bgblue
-local s_darkgray_bgdarkgray01
-local s_lightmagenta_bgnone
-local s_blue_bglightyellow
-local s_darkgray01_bglightyellow
-local s_blue_bglightgreen
-local s_darkgray01_bglightgreen
-local s_blue_bgwhite
-local s_darkgray01_bgwhite
-local s_lightgray_bgwhite
-local s_white_bglightgray
-local s_dark_gray_bgnone
-local s_lightyellow
-local s_yellow
-local s_green
-local s_white
-local s_blue
-local s_darkgray01
-local s_darkgray01_bgdarkgray
-local s_darkgray_bglightgreen
-local s_darkgray_bglightyellow
-local s_darkgray
-local s_lightgray_bgyellow
-
 s_lightmagenta_bgblue="${light_magenta}${bg_blue}${separator}${bg_none}${none}"
 s_lightmagenta_bgdarkgray="${light_magenta}${bg_dark_gray}${separator}${bg_none}${none}"
 s_lightmagenta_bgnone="${light_magenta}${bg_none}${separator}${bg_none}${none}"
