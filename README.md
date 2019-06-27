@@ -31,6 +31,8 @@ If you can't find the font, it's still possible to install it manually by runnin
 
 ## Git suggested colors
 
+You can type the command `fancygit --colors` to check out the color scheme config. This command will just show you an output like the example below:
+
 ```bash
 git config --global color.ui true
 
@@ -42,7 +44,7 @@ git config --global color.status.changed "yellow"
 git config --global color.status.untracked "cyan"
 ```
 
-### Command to apply it
+### Command to apply this color scheme config
 
 `fancygit --colors-set`
 

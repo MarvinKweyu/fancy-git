@@ -1,5 +1,10 @@
 # Fancy Git Changelog
 
+### v6.x
+
+- Improve command "fancygit --colors" output.
+- Improve command "fancygit --colors-set" output.
+
 ### v6.0.5
 
 - Add new icon when branch exists only locally. (Only colored themes)

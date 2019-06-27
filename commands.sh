@@ -112,14 +112,15 @@ fg_update_checker() {
 
 fg_show_colors_config() {
     echo "
-git config --global color.ui true
+ git config --global color.ui true
+ git config --global color.diff.meta \"yellow bold\"
+ git config --global color.diff.old \"red bold\"
+ git config --global color.diff.new \"green bold\"
+ git config --global color.status.added \"green bold\"
+ git config --global color.status.changed \"yellow\"
+ git config --global color.status.untracked \"cyan\"
 
-git config --global color.diff.meta \"yellow bold\"
-git config --global color.diff.old \"red bold\"
-git config --global color.diff.new \"green bold\"
-git config --global color.status.added \"green bold\"
-git config --global color.status.changed \"yellow\"
-git config --global color.status.untracked \"cyan\"
+ > Type \"fancygit --colors-set\" to apply this color scheme config.
 "
 }
 
@@ -131,6 +132,18 @@ fg_colors_config_set() {
     `git config --global color.status.added "green bold"`
     `git config --global color.status.changed "yellow"`
     `git config --global color.status.untracked "cyan"`
+
+    echo ""
+    echo " Applying color scheme..."
+    echo ""
+    echo " ✔ git config --global color.ui true"
+    echo " ✔ git config --global color.diff.meta \"yellow bold\""
+    echo " ✔ git config --global color.diff.old \"red bold\""
+    echo " ✔ git config --global color.diff.new \"green bold\""
+    echo " ✔ git config --global color.status.added \"green bold\""
+    echo " ✔ git config --global color.status.changed \"yellow\""
+    echo " ✔ git config --global color.status.untracked \"cyan\""
+    echo ""
 }
 
 case "$1" in
